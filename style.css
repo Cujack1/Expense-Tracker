@@ -1,0 +1,204 @@
+/* 
+8.2.22 
+    1. Style Buttons and Input Fields
+    2. Font Sizes for Input Fields & Placeholders
+    3. Highlight when hovering a row
+*/
+/* Greys          (#fece85, #330036, #8c8c8c, #666666, #292929) */
+/* Reds from Leaf (#de373f, #521916, #f6866a, #cb736d, #d7414b) */
+
+:root {
+    --header: #DE373F;
+    --lightText: #F6866A;
+    --darkAccent: #893933;
+    --darkText: #680b06;
+    --deleteButtons: #ff0000;
+}
+
+body {
+
+    font-family: 'Mouse Memoirs', sans-serif;
+    /* color: var(--dartText); */
+}
+
+
+/* Header */
+
+h1 {
+    position: absolute;
+    left: 50px;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--header);
+}
+
+
+/* Typography */
+
+.input-field {
+    text-align: center;
+    font-family: 'mouse memoirs', sans-serif;
+    font-size: 1.5rem;
+}
+
+input::placeholder {
+    opacity: .3;
+}
+
+#total {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--darkAccent);
+
+}
+
+.total-wrapper {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+th {
+    font-size: 1.3rem;
+    color: var(--lightText);
+}
+
+td {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--darkText);
+}
+
+label {
+    font-size: 1.2rem;
+    color: var(--lightText);
+    background-color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0 10px;
+}
+
+#clear,
+#submit-btn,
+.dlt-btn {
+    font-family: 'mouse memoirs', sans-serif;
+    font-size: 1.1rem;
+    color: var(--darkAccent);
+}
+
+.amount,
+.running-total,
+#total {
+    letter-spacing: 1px;
+}
+
+
+/* Input Fields */
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.input-field {
+    box-shadow: 5px 5px 100px var(--lightText);
+    border-radius: 20px;
+}
+
+label {
+    margin-top: 5px;
+}
+
+#date {
+    color: var(--darkText);
+}
+
+/* eliminates the up and down arrows from the input box */
+#amount::-webkit-inner-spin-button,
+#amount::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+/* Buttons */
+
+#clear,
+#submit-btn {
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: #fff;
+    box-shadow: 5px 5px 100px var(--lightText);
+}
+
+.dlt-btn {
+    border: none;
+    border-radius: 50%;
+    padding: 2px 10px;
+    color: var(--deleteButtons);
+    background: #fff;
+}
+
+#clear,
+#submit-btn,
+.dlt-btn:hover {
+    cursor: pointer;
+}
+
+
+/* Total */
+
+#total {
+    margin: 2px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.total-wrapper {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+
+/* Table */
+
+#doc-tbl {
+    width: 50%;
+    margin: 30px auto;
+    background: #fff;
+    border: 2px solid var(--lightText);
+    border-radius: 20px;
+    box-shadow: 5px 5px 100px var(--lightText);
+}
+
+th {
+    width: auto;
+    border: none;
+    border-radius: 20px;
+}
+
+.transaction-row:hover {
+    background: rgba(213, 174, 153, 0.2);
+    /* box-shadow: 5px 5px 100px var(--lightText); */
+}
+
+.dlt-btn-header {
+    width: 60px;
+}
+
+.dlt-btn-div {
+    text-align: center;
+    margin-top: 5px;
+}
+
+td {
+    padding-bottom: 10px;
+}

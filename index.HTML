@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- title & introduction & instructions -->
+
+    <h1>
+      Your <br />
+      Expense Tracker
+    </h1>
+
+    <!-- Input Fields -->
+    <div class="inputs">
+      <label for="date">Date</label>
+      <input class="input-field" id="date" type="date" />
+
+      <label for="name">Name</label>
+      <input class="input-field" id="name" type="text" placeholder="Name" />
+
+      <label for="amount">Amount</label>
+      <input
+        class="input-field"
+        id="amount"
+        type="number"
+        min="1"
+        step="1"
+        placeholder="Amount"
+      />
+      <div>
+        <button id="submit-btn" type="submit">Submit</button>
+        <button id="clear" type="reset">Clear</button>
+      </div>
+    </div>
+
+    <!-- Displaying Total -->
+
+    <div class="total-wrapper"><span id="total">Total: $0</span></div>
+
+    <!-- Table -->
+
+    <table id="doc-tbl">
+      <tr>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Running Total</th>
+        <th>ID</th>
+        <th class="dlt-btn-header"></th>
+      </tr>
+    </table>
+
+    <script src="index.js"></script>
+  </body>
+</html>
